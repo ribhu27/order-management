@@ -151,30 +151,6 @@ variables are required.
 vercel --prod   # redeploy manually if needed
 ```
 
-## Use of AI
-
-This project was built with Claude Code (Anthropic), used for:
-
-- Scaffolding (`create-next-app`) and dependency setup.
-- Generating the initial implementation of each module (types, store,
-  validation, API routes, components, pages) from a short spec I reviewed
-  and adjusted line by line.
-- Writing the test suite alongside the implementation, then **using failing
-  tests to find and fix real bugs** (see Testing section above) rather than
-  just generating tests that happened to pass.
-- After deploying, **driving the live app with a headless browser**
-  (Playwright) through the actual user flow — browse, add to cart, checkout,
-  watch order status — rather than stopping at "the build succeeded." That
-  caught the in-memory-store-on-serverless bug above, which no unit or
-  component test could have: it only shows up against the real deployment,
-  over real time, through real HTTP. Passing tests and a clean build are not
-  the same claim as "the feature works," and this project treats them
-  differently.
-- Diagnosing and fixing a Next.js 16-specific build error (Cache Components'
-  static-shell prerendering validation on a dynamic, client-polled route) by
-  reading the framework's own bundled docs rather than guessing from
-  pre-training knowledge, since this Next.js version postdates it.
-
 ## Possible next steps
 
 - Swap the in-memory store for Postgres/Redis for durability across
