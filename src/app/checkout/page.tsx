@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useCart } from "@/components/CartContext";
 import { MENU_ITEMS } from "@/lib/menu-data";
+import { cacheOrder } from "@/lib/order-cache";
 
 type FormState = {
   name: string;
@@ -57,6 +58,7 @@ export default function CheckoutPage() {
         return;
       }
 
+      cacheOrder(data.order);
       clear();
       router.push(`/orders/${data.order.id}`);
     } catch {
