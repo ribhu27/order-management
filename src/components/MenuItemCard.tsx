@@ -1,24 +1,28 @@
 "use client";
 
-import Image from "next/image";
 import { MenuItem } from "@/lib/types";
 import { useCart } from "./CartContext";
+
+const CATEGORY_GRADIENTS: Record<string, string> = {
+  Pizza: "from-amber-100 to-orange-200 dark:from-amber-950 dark:to-orange-900",
+  Burgers: "from-yellow-100 to-amber-200 dark:from-yellow-950 dark:to-amber-900",
+  Salads: "from-lime-100 to-green-200 dark:from-lime-950 dark:to-green-900",
+  Sides: "from-orange-100 to-red-200 dark:from-orange-950 dark:to-red-900",
+  Drinks: "from-sky-100 to-cyan-200 dark:from-sky-950 dark:to-cyan-900",
+};
 
 export function MenuItemCard({ item }: { item: MenuItem }) {
   const { items, addItem, setQuantity } = useCart();
   const cartItem = items.find((i) => i.menuItemId === item.id);
+  const gradient = CATEGORY_GRADIENTS[item.category] ?? "from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-700";
 
   return (
     <div className="flex flex-col overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm dark:border-white/10 dark:bg-neutral-900">
-      <div className="relative h-40 w-full bg-neutral-100 dark:bg-neutral-800">
-        <Image
-          src={item.image}
-          alt={item.name}
-          fill
-          sizes="(max-width: 768px) 100vw, 300px"
-          className="object-cover"
-          unoptimized
-        />
+      <div
+        className={`flex h-40 w-full items-center justify-center bg-gradient-to-br ${gradient}`}
+        aria-hidden="true"
+      >
+        <span className="text-6xl">{item.emoji}</span>
       </div>
       <div className="flex flex-1 flex-col gap-2 p-4">
         <div className="flex items-start justify-between gap-2">

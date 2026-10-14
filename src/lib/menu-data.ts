@@ -6,7 +6,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Margherita Pizza",
     description: "Classic pizza with fresh mozzarella, tomato sauce, and basil.",
     price: 9.99,
-    image: "https://picsum.photos/seed/margherita-pizza/400/300",
+    emoji: "🍕",
     category: "Pizza",
   },
   {
@@ -14,7 +14,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Pepperoni Pizza",
     description: "Loaded with pepperoni and mozzarella on a crisp crust.",
     price: 11.49,
-    image: "https://picsum.photos/seed/pepperoni-pizza/400/300",
+    emoji: "🍕",
     category: "Pizza",
   },
   {
@@ -22,7 +22,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Classic Cheeseburger",
     description: "Beef patty, cheddar, lettuce, tomato, and house sauce.",
     price: 8.49,
-    image: "https://picsum.photos/seed/cheeseburger/400/300",
+    emoji: "🍔",
     category: "Burgers",
   },
   {
@@ -30,7 +30,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Veggie Burger",
     description: "Grilled veggie patty with avocado and chipotle mayo.",
     price: 7.99,
-    image: "https://picsum.photos/seed/veggie-burger/400/300",
+    emoji: "🥬",
     category: "Burgers",
   },
   {
@@ -38,7 +38,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Caesar Salad",
     description: "Crisp romaine, parmesan, croutons, and Caesar dressing.",
     price: 6.99,
-    image: "https://picsum.photos/seed/caesar-salad/400/300",
+    emoji: "🥗",
     category: "Salads",
   },
   {
@@ -46,7 +46,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Loaded Fries",
     description: "Crispy fries topped with cheese, bacon bits, and scallions.",
     price: 5.49,
-    image: "https://picsum.photos/seed/loaded-fries/400/300",
+    emoji: "🍟",
     category: "Sides",
   },
   {
@@ -54,7 +54,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Chocolate Shake",
     description: "Rich and creamy chocolate milkshake.",
     price: 4.49,
-    image: "https://picsum.photos/seed/chocolate-shake/400/300",
+    emoji: "🥤",
     category: "Drinks",
   },
   {
@@ -62,7 +62,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Fresh Lemonade",
     description: "Hand-squeezed lemonade over ice.",
     price: 3.49,
-    image: "https://picsum.photos/seed/lemonade/400/300",
+    emoji: "🍋",
     category: "Drinks",
   },
 ];

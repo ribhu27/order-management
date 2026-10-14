@@ -3,7 +3,8 @@ export type MenuItem = {
   name: string;
   description: string;
   price: number;
-  image: string;
+  /** A representative emoji, used instead of stock photography (see menu-data.ts). */
+  emoji: string;
   category: string;
 };
 

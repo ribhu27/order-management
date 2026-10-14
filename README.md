@@ -181,5 +181,9 @@ This project was built with Claude Code (Anthropic), used for:
   serverless invocations.
 - Replace polling with Server-Sent Events for lower-latency status updates.
 - Add an admin view to manually advance/override order status.
-- Replace `picsum.photos` placeholder images with real menu photography and
-  move them to `next/image`'s optimized (non-`unoptimized`) path.
+- Replace the emoji tiles with real menu photography via `next/image`. (An
+  earlier version used `picsum.photos` as a placeholder, but random stock
+  photos keyed by seed string turned out to render completely unrelated
+  images per item — e.g. a galaxy for "Fresh Lemonade" — which looked wrong
+  in a real browser even though nothing about it would fail a test or a
+  build. Emoji tiles are an honest placeholder instead of a misleading one.)
