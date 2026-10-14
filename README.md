@@ -5,6 +5,9 @@ check out with delivery details, and track order status in (simulated) real time
 
 Built for the RaftLabs Sr Full Stack Developer assessment.
 
+**Live app:** https://order-management-ugru.vercel.app
+**Repo:** https://github.com/ribhu27/order-management
+
 ## Stack
 
 - **Next.js 16** (App Router, TypeScript) — a single app provides both the
@@ -111,13 +114,13 @@ cart state leaking between tests via `localStorage` not being cleared.
 
 ## Deployment
 
-Deploy as a standard Next.js app:
+Deployed on Vercel at https://order-management-ugru.vercel.app, connected to
+this repo's `master` branch (pushes redeploy automatically). No environment
+variables are required.
 
 ```bash
-vercel        # or: netlify deploy
+vercel --prod   # redeploy manually if needed
 ```
-
-No environment variables are required.
 
 ## Use of AI
 
